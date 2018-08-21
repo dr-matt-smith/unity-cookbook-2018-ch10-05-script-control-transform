@@ -44,7 +44,8 @@ public class BasicController: MonoBehaviour {
 		if(controller.isGrounded){
 			
 			if (Input.GetKey (KeyCode.Space)) {
-				anim.SetBool ("Jump", true);
+//				anim.SetBool ("Jump", true);
+				anim.SetTrigger("JumpTrigger");
 				verticalSpeed = jumpHeight;
 			}
 			
@@ -151,7 +152,7 @@ public class BasicController: MonoBehaviour {
 		} else {
 			deltaPosition.x = xVelocity * Time.deltaTime;
 			deltaPosition.z = zVelocity * Time.deltaTime;
-			anim.SetBool ("Jump", false);
+//			anim.SetBool ("Jump", false);
 		}
 		
 		deltaPosition.y = verticalSpeed * Time.deltaTime;
